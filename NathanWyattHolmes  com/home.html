@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="scripts/DropDownMenu.js" type="text/javascript"></script>
+    <title> The Website of the OG Nathan Holmes  </title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div>
+        <ul id="TopDropDownMenu">
+            <li id="menuProfessionalTop">
+                <a class="TopLevelMenuItem" onmouseover="ddmOpen('menuProfessional')"  onclick="ddmOpen('menuProfessional')" onmouseout="mclosetime()">Professional</a>
+                <div id="menuProfessional" onmouseover="cancelDelayedMenuClose()" onmouseout="mclosetime()" style="visibility: hidden;">
+                    <a href="Resume_NathanHolmes.docx">Resume</a>
+                    <a href="OnSoftwareQualityEngineering.html">Lessons Learned in QA</a>
+                    <a href="https://www.linkedin.com/in/nathan-holmes-4165b939">Linked in</a>
+                </div>
+            </li>
+
+            <li id="menuPersonalTop">
+                <a class="TopLevelMenuItem" onmouseover="ddmOpen('menuPersonal')" onclick="ddmOpen('menuPersonal')" onmouseout="mclosetime()">Personal</a>
+                <div id="menuPersonal" onmouseover="cancelDelayedMenuClose()" onmouseout="mclosetime()" style="visibility: hidden;">
+                    <a href="Pictures.htm">Pictures</a>
+                </div>
+            </li>
+
+            <li> <a class="TopLevelMenuItem" href="mailto:NathanHolmes@NathanWyattHolmes.com">Contact</a> </li>
+        </ul>
+    </div>
+    <div style="clear: both">
+        <h1 id="welcome" style="color: white; text-align: center; font-size: 4.08vw;">Welcome to Nathan Holmes's Site</h1>
+    </div>
+</body>
+</html>
