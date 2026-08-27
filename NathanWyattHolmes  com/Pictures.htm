@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	
 	<head>
-		<link href="styles/Styles.css" rel="stylesheet" type="text/css"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="styles/styles.css" rel="stylesheet" type="text/css"/>
 		<title>Pictures Mostly Taken by Nathan Holmes</title>
 	</head>
 
@@ -11,12 +13,12 @@
         <script src="scripts/DropDownMenu.js"></script>
     
 	<ul id="TopDropDownMenu">
-        <li class="TopLevelMenuItem">
-            <a id="HomeLink" href="home.html">Home</a>
+        <li>
+            <a class="TopLevelMenuItem" id="HomeLink" href="home.html">Home</a>
         </li>
         <li>
             <!-- Pictures Dropdown Menu -->
-            <a class="TopLevelMenuItem" href="Pictures.htm" id="PicturesLink" onmouseover="ddmOpen('PicturesMenu')" onmouseout="mclosetime()"> Pictures </a>
+            <a class="TopLevelMenuItem" href="Pictures.htm" id="PicturesLink" onmouseover="ddmOpen('PicturesMenu')" onclick="ddmToggle('PicturesMenu', event)" onmouseout="mclosetime()"> Pictures </a>
             <!-- Pictures Dropdown Menu Items -->
             <div id="PicturesMenu" onmouseover="cancelDelayedMenuClose()" onmouseout="mclosetime()">
                 <a href="Pictures/Dogs/PicturesOfDogs.htm">Best Friends</a>
