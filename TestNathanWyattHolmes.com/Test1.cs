@@ -9,7 +9,7 @@ namespace TestNathanWyattHolmes.com
 	{
 		IWebDriver driver = new ChromeDriver();
 
-		public static TestContext TestContext { get; set; }
+		public TestContext TestContext { get; set; }
 
 		[AssemblyInitialize]
 		public static void AssemblyInit(TestContext context)
@@ -59,7 +59,7 @@ namespace TestNathanWyattHolmes.com
 		{
 			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
 			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
-			Assert.AreEqual("Nathan Wyatt Holmes", driver.Title);
+			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
 		}
 	}
 }
