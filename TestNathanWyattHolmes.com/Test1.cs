@@ -7,7 +7,12 @@ namespace TestNathanWyattHolmes.com
 	[TestClass]
 	public sealed class Test1
 	{
-		//IWebDriver driver = new ChromeDriver();
+		static IWebDriver driver;
+
+		public Test1()
+		{
+			driver = new ChromeDriver();
+		}
 
 		public TestContext TestContext { get; set; }
 
@@ -26,19 +31,19 @@ namespace TestNathanWyattHolmes.com
 		[ClassInitialize]
 		public static void ClassInit(TestContext context)
 		{
-			// This method is called once for the test class, before any tests of the class are run.
 		}
 
 		[ClassCleanup]
 		public static void ClassCleanup()
 		{
-			// This method is called once for the test class, after all tests of the class are run.
+			driver.Quit();
 		}
 
 		[TestInitialize]
 		public void TestInit()
 		{
-			// This method is called before each test method.
+			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
+			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
 		}
 
 		[TestCleanup]
@@ -48,33 +53,28 @@ namespace TestNathanWyattHolmes.com
 			{
 				TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
 
-				//((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("screenshot.png");
-				//TestContext.AddResultFile("screenshot.png");
+				((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("screenshot.png");
+				TestContext.AddResultFile("screenshot.png");
 				
 			}
+			
 		}
 
 		[TestMethod]
 		public void OpenLandingPage()
 		{
 			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
-			//driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
-			//Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
+			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
+			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
 		}
 
 
 		[TestMethod]
-		public void MockTest()
+		public void ClickLinkedIn()
 		{
-			TestContext.WriteLine("This is a mock test.");
+			driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']")).Click();
 		}
 
-		[TestMethod]
-		public void MockTest2()
-		{
-			TestContext.WriteLine("This is a mock failed test.");
-			Assert.Fail("This test is expected to fail.");
-		}
 
 		[TestMethod]
 		public void MockTest3()
