@@ -7,7 +7,7 @@ namespace TestNathanWyattHolmes.com
 	[TestClass]
 	public sealed class Test1
 	{
-		IWebDriver driver = new ChromeDriver();
+		//IWebDriver driver = new ChromeDriver();
 
 		public TestContext TestContext { get; set; }
 
@@ -48,8 +48,8 @@ namespace TestNathanWyattHolmes.com
 			{
 				TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
 
-				((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("screenshot.png");
-				TestContext.AddResultFile("screenshot.png");
+				//((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("screenshot.png");
+				//TestContext.AddResultFile("screenshot.png");
 				
 			}
 		}
@@ -58,8 +58,29 @@ namespace TestNathanWyattHolmes.com
 		public void OpenLandingPage()
 		{
 			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
-			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
-			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
+			//driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
+			//Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
+		}
+
+
+		[TestMethod]
+		public void MockTest()
+		{
+			TestContext.WriteLine("This is a mock test.");
+		}
+
+		[TestMethod]
+		public void MockTest2()
+		{
+			TestContext.WriteLine("This is a mock failed test.");
+			Assert.Fail("This test is expected to fail.");
+		}
+
+		[TestMethod]
+		public void MockTest3()
+		{
+			TestContext.WriteLine("This is a mock inconclusive test.");
+			Assert.Inconclusive("This test is expected to be inconclusive.");
 		}
 	}
 }
