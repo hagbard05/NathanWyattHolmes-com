@@ -6,7 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseVSTest>true</UseVSTest>
-	<SelfContained>true</SelfContained>
   </PropertyGroup>
 
   <ItemGroup>
