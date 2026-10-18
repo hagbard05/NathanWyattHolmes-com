@@ -11,7 +11,6 @@ namespace TestNathanWyattHolmes.com
 
 		public Test1()
 		{
-			driver = new ChromeDriver();
 		}
 
 		public TestContext TestContext { get; set; }
@@ -31,6 +30,8 @@ namespace TestNathanWyattHolmes.com
 		[ClassInitialize]
 		public static void ClassInit(TestContext context)
 		{
+			driver = new ChromeDriver(); 
+			driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(6);
 		}
 
 		[ClassCleanup]
@@ -44,6 +45,7 @@ namespace TestNathanWyattHolmes.com
 		{
 			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
 			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
+			System.Threading.Thread.Sleep(0);
 		}
 
 		[TestCleanup]
@@ -63,8 +65,6 @@ namespace TestNathanWyattHolmes.com
 		[TestMethod]
 		public void OpenLandingPage()
 		{
-			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
-			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
 			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
 		}
 
@@ -73,11 +73,19 @@ namespace TestNathanWyattHolmes.com
 		public void ClickLinkedIn()
 		{
 			driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']")).Click();
+			System.Threading.Thread.Sleep(0);
+		}
+
+		[TestMethod]
+		public void ClickLessonsLearned()
+		{
+			driver.FindElement(By.CssSelector("a[href='OnSoftwareQualityEngineering.html']")).Click();
+			System.Threading.Thread.Sleep(0);
 		}
 
 
 		[TestMethod]
-		public void MockTest3()
+		public void MockInconclusive()
 		{
 			TestContext.WriteLine("This is a mock inconclusive test.");
 			Assert.Inconclusive("This test is expected to be inconclusive.");
