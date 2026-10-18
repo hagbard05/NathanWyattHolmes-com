@@ -18,13 +18,11 @@ namespace TestNathanWyattHolmes.com
 		[AssemblyInitialize]
 		public static void AssemblyInit(TestContext context)
 		{
-			// This method is called once for the test assembly, before any tests are run.
 		}
 
 		[AssemblyCleanup]
 		public static void AssemblyCleanup()
 		{
-			// This method is called once for the test assembly, after all tests are run.
 		}
 
 		[ClassInitialize]
@@ -53,13 +51,33 @@ namespace TestNathanWyattHolmes.com
 		{
 			if (TestContext.CurrentTestOutcome == UnitTestOutcome.Failed)
 			{
-				TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
+				try
+				{
+					TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
+					string fileName = $"{TestContext.TestName}_Screenshot.png";
+					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
+					((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filePath);
+					TestContext.AddResultFile(filePath);
+				}
+				catch (Exception ex)
+				{
+					TestContext.WriteLine($"Error during test cleanup: {ex.Message}");
+				}
 
-				((ITakesScreenshot)driver).GetScreenshot().SaveAsFile("screenshot.png");
-				TestContext.AddResultFile("screenshot.png");
-				
+				try
+				{
+					string pageSource = driver.PageSource;
+					string fileName = $"{TestContext.TestName}_PageSource.html";
+					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
+
+					File.WriteAllText(filePath, pageSource, System.Text.Encoding.UTF8);
+					TestContext.AddResultFile(filePath);
+				}
+				catch (Exception ex)
+				{
+					TestContext.WriteLine($"Failed to attach page source: {ex.Message}");
+				}
 			}
-			
 		}
 
 		[TestMethod]
