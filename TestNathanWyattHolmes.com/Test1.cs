@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using NathanWyattHolmesComPages;
+
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 
@@ -8,6 +10,7 @@ namespace TestNathanWyattHolmes.com
 	public sealed class Test1
 	{
 		static IWebDriver driver;
+		HomePage homePage;
 
 		public Test1()
 		{
@@ -42,8 +45,7 @@ namespace TestNathanWyattHolmes.com
 		public void TestInit()
 		{
 			TestContext.WriteLine("Opening the landing page of Nathan Wyatt Holmes' website.");
-			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
-			System.Threading.Thread.Sleep(0);
+			homePage = new HomePage(driver);
 		}
 
 		[TestCleanup]
@@ -51,9 +53,9 @@ namespace TestNathanWyattHolmes.com
 		{
 			if (TestContext.CurrentTestOutcome == UnitTestOutcome.Failed)
 			{
+				TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
 				try
 				{
-					TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
 					string fileName = $"{TestContext.TestName}_Screenshot.png";
 					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
 					((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filePath);
@@ -61,7 +63,7 @@ namespace TestNathanWyattHolmes.com
 				}
 				catch (Exception ex)
 				{
-					TestContext.WriteLine($"Error during test cleanup: {ex.Message}");
+					TestContext.WriteLine($"Error saving screenshot: {ex.Message}");
 				}
 
 				try
@@ -91,16 +93,15 @@ namespace TestNathanWyattHolmes.com
 		public void ClickLinkedIn()
 		{
 			driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']")).Click();
-			System.Threading.Thread.Sleep(0);
+			Thread.Sleep(0);
 		}
 
 		[TestMethod]
 		public void ClickLessonsLearned()
 		{
-			driver.FindElement(By.CssSelector("a[href='OnSoftwareQualityEngineering.html']")).Click();
-			System.Threading.Thread.Sleep(0);
+			homePage.ClickLessionsLearnedInSoftwareTesting();
+			Thread.Sleep(0);
 		}
-
 
 		[TestMethod]
 		public void MockInconclusive()
