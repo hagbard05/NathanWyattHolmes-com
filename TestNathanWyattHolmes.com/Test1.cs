@@ -92,7 +92,7 @@ namespace TestNathanWyattHolmes.com
 		[TestMethod]
 		public void ClickLinkedIn()
 		{
-			driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']")).Click();
+			homePage.ClickLinkedIn();
 			Thread.Sleep(0);
 		}
 
