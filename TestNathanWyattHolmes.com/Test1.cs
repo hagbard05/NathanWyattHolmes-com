@@ -92,14 +92,14 @@ namespace TestNathanWyattHolmes.com
 		[TestMethod]
 		public void ClickLinkedIn()
 		{
-			homePage.ClickLinkedIn();
+			homePage.ClickLnkLinkedIn();
 			Thread.Sleep(0);
 		}
 
 		[TestMethod]
 		public void ClickLessonsLearned()
 		{
-			homePage.ClickLessionsLearnedInSoftwareTesting();
+			homePage.ClickLnkLessionsLearnedInSoftwareTesting();
 			Thread.Sleep(0);
 		}
 
