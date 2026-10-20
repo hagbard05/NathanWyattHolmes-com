@@ -11,8 +11,10 @@ namespace NathanWyattHolmesComPages
 		public HomePage(IWebDriver driver)
 		{
 			this.driver = driver;
-			driver.Navigate().GoToUrl("https://www.nathanwyattholmes.com");
+			driver.Navigate().GoToUrl("http://www.nathanwyattholmes.com");
 			Thread.Sleep(0); 
+			WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+			wait.Until(d => d.Url.Contains("nathanwyattholmes.com"));
 		}
 
 		public IWebElement menuProfessional => driver.FindElement(By.CssSelector("#menuProfessionalTop .TopLevelMenuItem"));
