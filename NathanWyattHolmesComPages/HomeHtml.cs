@@ -20,19 +20,28 @@ namespace NathanWyattHolmesComPages
 		public IWebElement menuProfessional => driver.FindElement(By.CssSelector("#menuProfessionalTop .TopLevelMenuItem"));
 		public IWebElement lnkLessionsLearnedInSoftwareTesting => driver.FindElement(By.CssSelector("a[href='OnSoftwareQualityEngineering.html']"));
 		public IWebElement lnkLinkedIn => driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']"));
+		public IWebElement lnkResume => driver.FindElement(By.CssSelector("a[href='Resume_NathanHolmes.docx']")); 
 
 		public void ClickLnkLessionsLearnedInSoftwareTesting()
 		{
-			Actions actions = new Actions(driver);
-			actions.MoveToElement(menuProfessional).Perform();
-			lnkLessionsLearnedInSoftwareTesting.Click();
+			ClickMenuItem(this.lnkLessionsLearnedInSoftwareTesting);
 		}
 
 		public void ClickLnkLinkedIn()
 		{
+			ClickMenuItem(this.lnkLinkedIn);
+		}
+
+		public void ClickLnkResume()
+		{
+			ClickMenuItem(this.lnkResume);
+		}
+
+		public void ClickMenuItem( IWebElement menuItem)
+		{
 			Actions actions = new Actions(driver);
 			actions.MoveToElement(menuProfessional).Perform();
-			lnkLinkedIn.Click();
+			menuItem.Click();
 		}
 	}
 }

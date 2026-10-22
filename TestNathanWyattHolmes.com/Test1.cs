@@ -12,26 +12,20 @@ namespace TestNathanWyattHolmes.com
 		static IWebDriver driver;
 		HomePage homePage;
 
-		public Test1()
-		{
-		}
-
 		public TestContext TestContext { get; set; }
-
-		[AssemblyInitialize]
-		public static void AssemblyInit(TestContext context)
-		{
-		}
-
-		[AssemblyCleanup]
-		public static void AssemblyCleanup()
-		{
-		}
 
 		[ClassInitialize]
 		public static void ClassInit(TestContext context)
 		{
-			driver = new ChromeDriver(); 
+			var options = new ChromeOptions();
+
+			// Core arguments required for Linux CI agents
+			options.AddArgument("--headless=new");          // Runs without a GUI
+			options.AddArgument("--no-sandbox");             // Bypasses container security boundaries
+			options.AddArgument("--disable-dev-shm-usage");  // Overcomes resource limits in Linux
+
+			Console.WriteLine("Initializing headless ChromeDriver for MSTest execution.");
+			driver = new ChromeDriver(options);
 			driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(6);
 		}
 
@@ -39,6 +33,7 @@ namespace TestNathanWyattHolmes.com
 		public static void ClassCleanup()
 		{
 			driver.Quit();
+			Console.WriteLine("ChromeDriver cleanup completed.");
 		}
 
 		[TestInitialize]
@@ -53,41 +48,17 @@ namespace TestNathanWyattHolmes.com
 		{
 			if (TestContext.CurrentTestOutcome == UnitTestOutcome.Failed)
 			{
-				TestContext.WriteLine($"❌Test '{TestContext.TestName}' failed.");
-				try
-				{
-					string fileName = $"{TestContext.TestName}_Screenshot.png";
-					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
-					((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filePath);
-					TestContext.AddResultFile(filePath);
-				}
-				catch (Exception ex)
-				{
-					TestContext.WriteLine($"Error saving screenshot: {ex.Message}");
-				}
-
-				try
-				{
-					string pageSource = driver.PageSource;
-					string fileName = $"{TestContext.TestName}_PageSource.html";
-					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
-
-					File.WriteAllText(filePath, pageSource, System.Text.Encoding.UTF8);
-					TestContext.AddResultFile(filePath);
-				}
-				catch (Exception ex)
-				{
-					TestContext.WriteLine($"Failed to attach page source: {ex.Message}");
-				}
+				TakeScreenshot();
+				AttachPageSource();
 			}
 		}
 
+		#region Test Methods
 		[TestMethod]
 		public void OpenLandingPage()
 		{
 			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
 		}
-
 
 		[TestMethod]
 		public void ClickLinkedIn()
@@ -104,10 +75,70 @@ namespace TestNathanWyattHolmes.com
 		}
 
 		[TestMethod]
+		public void ClickResume()
+		{
+			homePage.ClickLnkResume();
+			Thread.Sleep(0);
+		}
+
+		[TestMethod]
 		public void MockInconclusive()
 		{
 			TestContext.WriteLine("This is a mock inconclusive test.");
 			Assert.Inconclusive("This test is expected to be inconclusive.");
+		}
+		#endregion
+
+		private void TakeScreenshot()
+		{
+			try
+			{
+				string fileName = $"{TestContext.TestName}_Screenshot.png";
+				string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
+				((ITakesScreenshot)driver).GetScreenshot().SaveAsFile(filePath);
+				TestContext.AddResultFile(filePath);
+			}
+			catch (Exception ex)
+			{
+				TestContext.WriteLine($"Error saving screenshot: {ex.Message}");
+			}
+		}
+
+		void AttachPageSource()
+		{
+			TestContext.WriteLine("Attempting to save and attach the complete page as an MHTML archive.");
+			try
+			{
+				// Send raw command via Chromium DevTools Protocol (CDP) to take a snapshot
+				var parameters = new Dictionary<string, object> { { "format", "mhtml" } };
+
+				// This returns the full MHTML structural string enclosing CSS, JS, and image assets
+				var response = ((ChromeDriver)driver).ExecuteCdpCommand("Page.captureSnapshot", parameters) as Dictionary<string, object>;
+
+				if (response != null && response.TryGetValue("data", out var mhtmlData))
+				{
+					string mhtmlContent = mhtmlData.ToString();
+
+					// Define the path inside the MSTest execution directory using the .mhtml extension
+					string fileName = $"{TestContext.TestName}_CompletePage.mhtml";
+					string filePath = Path.Combine(TestContext.TestRunResultsDirectory, fileName);
+
+					// Save the full archive to disk
+					File.WriteAllText(filePath, mhtmlContent, System.Text.Encoding.UTF8);
+
+					// Attach the complete page directly to the individual MSTest result
+					TestContext.AddResultFile(filePath);
+				}
+			}
+			catch (Exception ex)
+			{
+				TestContext.WriteLine($"Failed to save complete MHTML page: {ex.Message}");
+			}
+		}
+
+		public void Dispose()
+		{
+			driver?.Dispose();
 		}
 	}
 }
