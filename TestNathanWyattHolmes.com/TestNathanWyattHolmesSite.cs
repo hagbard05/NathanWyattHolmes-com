@@ -57,28 +57,63 @@ namespace TestNathanWyattHolmes.com
 		[TestMethod]
 		public void OpenLandingPage()
 		{
+			TestContext.WriteLine("Verifying the landing page title.");
 			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
 		}
 
 		[TestMethod]
 		public void ClickLinkedIn()
 		{
+			TestContext.WriteLine("Clicking the LinkedIn link on the landing page.");
 			homePage.ClickLnkLinkedIn();
-			Thread.Sleep(0);
+			Assert.IsTrue(driver.Url.Contains("linkedin.com", StringComparison.OrdinalIgnoreCase),
+				$"Expected to navigate to LinkedIn, but current URL was {driver.Url}.");
 		}
 
 		[TestMethod]
 		public void ClickLessonsLearned()
 		{
+			TestContext.WriteLine("Clicking the 'Lessons Learned' link on the landing page.");
 			homePage.ClickLnkLessionsLearnedInSoftwareTesting();
-			Thread.Sleep(0);
+			Assert.IsTrue(driver.Url.EndsWith("OnSoftwareQualityEngineering.html", StringComparison.OrdinalIgnoreCase),
+				$"Expected to open the Lessons Learned page, but current URL was {driver.Url}.");
 		}
 
 		[TestMethod]
 		public void ClickResume()
 		{
+			TestContext.WriteLine("Clicking the resume link on the landing page.");
+			Assert.IsTrue(homePage.lnkResume.GetAttribute("href")?.EndsWith("Resume_NathanHolmes.docx", StringComparison.OrdinalIgnoreCase),
+				"Expected the Resume menu link to point to Resume_NathanHolmes.docx.");
 			homePage.ClickLnkResume();
-			Thread.Sleep(0);
+		}
+
+		[TestMethod]
+		public void VerifyContactLink()
+		{
+			TestContext.WriteLine("Verifying the Contact link on the landing page.");
+			Assert.AreEqual("mailto:NathanHolmes@NathanWyattHolmes.com", homePage.lnkContact.GetAttribute("href"));
+		}
+
+		[TestMethod]
+		public void ClickHomeFromLessonsLearned()
+		{
+			TestContext.WriteLine("Opening the Lessons Learned page and returning home from the top menu.");
+			homePage.ClickLnkLessionsLearnedInSoftwareTesting();
+			homePage.ClickLnkHome();
+			Assert.IsTrue(driver.Url.EndsWith("home.html", StringComparison.OrdinalIgnoreCase),
+				$"Expected to return to the home page, but current URL was {driver.Url}.");
+			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title.Trim());
+		}
+
+		[TestMethod]
+		public void ClickPicturesFromPersonalMenu()
+		{
+			TestContext.WriteLine("Opening the Pictures page from the Personal top-menu dropdown.");
+			homePage.ClickLnkPictures();
+			Assert.IsTrue(driver.Url.EndsWith("Pictures.htm", StringComparison.OrdinalIgnoreCase),
+				$"Expected to open the Pictures page, but current URL was {driver.Url}.");
+			Assert.AreEqual("Pictures Mostly Taken by Nathan Holmes", driver.Title.Trim());
 		}
 
 		[TestMethod]
