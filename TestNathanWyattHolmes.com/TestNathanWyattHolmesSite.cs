@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 namespace TestNathanWyattHolmes.com
 {
 	[TestClass]
-	public sealed class Test1
+	public sealed class TestNathanWyattHolmesSite
 	{
 		static IWebDriver driver;
 		HomePage homePage;
