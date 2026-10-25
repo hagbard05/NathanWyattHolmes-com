@@ -20,7 +20,7 @@ namespace TestNathanWyattHolmes.com
 			var options = new ChromeOptions();
 
 			// Core arguments required for Linux CI agents
-			options.AddArgument("--headless=new");          // Runs without a GUI
+			//options.AddArgument("--headless=new");          // Runs without a GUI
 			options.AddArgument("--no-sandbox");             // Bypasses container security boundaries
 			options.AddArgument("--disable-dev-shm-usage");  // Overcomes resource limits in Linux
 
@@ -33,7 +33,6 @@ namespace TestNathanWyattHolmes.com
 		public static void ClassCleanup()
 		{
 			driver.Quit();
-			Console.WriteLine("ChromeDriver cleanup completed.");
 		}
 
 		[TestInitialize]
@@ -114,13 +113,6 @@ namespace TestNathanWyattHolmes.com
 			Assert.IsTrue(driver.Url.EndsWith("Pictures.htm", StringComparison.OrdinalIgnoreCase),
 				$"Expected to open the Pictures page, but current URL was {driver.Url}.");
 			Assert.AreEqual("Pictures Mostly Taken by Nathan Holmes", driver.Title.Trim());
-		}
-
-		[TestMethod]
-		public void MockInconclusive()
-		{
-			TestContext.WriteLine("This is a mock inconclusive test.");
-			Assert.Inconclusive("This test is expected to be inconclusive.");
 		}
 		#endregion
 
