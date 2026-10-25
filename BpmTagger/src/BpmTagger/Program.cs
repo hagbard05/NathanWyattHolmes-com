@@ -17,12 +17,12 @@ public static class Program
     private const int SW_HIDE = 0;
 
     [STAThread]
-    public static async Task<int> Main(string[] args)
+    public static int Main(string[] args)
     {
         // If launched with command-line arguments, run purely as a terminal tool
         if (args.Length > 0)
         {
-            return await RunCliAsync(args);
+            return RunCliAsync(args).GetAwaiter().GetResult();
         }
 
         // When launched without arguments (e.g. from Start Menu or desktop shortcut),
@@ -44,7 +44,7 @@ public static class Program
         bool overwrite = false;
         bool fastPreview = true;
         bool addToPath = false;
-        string targetPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+        string targetPath = PathHelper.GetDefaultMusicPath();
 
         for (int i = 0; i < args.Length; i++)
         {

@@ -6,6 +6,35 @@ namespace BpmTagger;
 public static class PathHelper
 {
     /// <summary>
+    /// Gets the best available Music folder, falling back to User Profile / Music or User Profile if unmapped.
+    /// </summary>
+    public static string GetDefaultMusicPath()
+    {
+        try
+        {
+            string music = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            if (!string.IsNullOrWhiteSpace(music) && Directory.Exists(music))
+            {
+                return music;
+            }
+
+            string userProfile = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            if (!string.IsNullOrWhiteSpace(userProfile))
+            {
+                string userMusic = Path.Combine(userProfile, "Music");
+                if (Directory.Exists(userMusic)) return userMusic;
+                return userProfile;
+            }
+
+            return AppContext.BaseDirectory;
+        }
+        catch
+        {
+            return @"C:\";
+        }
+    }
+
+    /// <summary>
     /// Checks if the application directory is in the current User PATH environment variable.
     /// </summary>
     public static bool IsInUserPath()

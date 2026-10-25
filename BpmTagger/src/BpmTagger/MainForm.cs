@@ -68,7 +68,7 @@ public class MainForm : Form
 
         txtPath = new TextBox
         {
-            Text = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic),
+            Text = PathHelper.GetDefaultMusicPath(),
             Location = new Point(20, 97),
             Size = new Size(490, 26),
             Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
@@ -83,15 +83,7 @@ public class MainForm : Form
             Anchor = AnchorStyles.Top | AnchorStyles.Right,
             Cursor = Cursors.Hand
         };
-        btnBrowse.Click += (s, e) =>
-        {
-            using var dlg = new FolderBrowserDialog();
-            dlg.SelectedPath = txtPath.Text;
-            if (dlg.ShowDialog(this) == DialogResult.OK)
-            {
-                txtPath.Text = dlg.SelectedPath;
-            }
-        };
+        btnBrowse.Click += BtnBrowse_Click;
         Controls.Add(btnBrowse);
 
         // Options
@@ -192,6 +184,78 @@ public class MainForm : Form
             Font = new Font("Consolas", 9f)
         };
         Controls.Add(lstLog);
+    }
+
+    private void BtnBrowse_Click(object? sender, EventArgs e)
+    {
+        try
+        {
+            using var dlg = new FolderBrowserDialog
+            {
+                Description = "Select Folder with MP3 Files",
+                UseDescriptionForTitle = true,
+                ShowNewFolderButton = true,
+                AutoUpgradeEnabled = true
+            };
+
+            string current = txtPath.Text?.Trim() ?? string.Empty;
+            if (!string.IsNullOrEmpty(current) && Directory.Exists(current))
+            {
+                dlg.InitialDirectory = current;
+                dlg.SelectedPath = current;
+            }
+            else
+            {
+                string fallback = PathHelper.GetDefaultMusicPath();
+                dlg.InitialDirectory = fallback;
+                dlg.SelectedPath = fallback;
+            }
+
+            if (dlg.ShowDialog(this) == DialogResult.OK && !string.IsNullOrWhiteSpace(dlg.SelectedPath))
+            {
+                txtPath.Text = dlg.SelectedPath;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Fallback 1: Try classic folder browser dialog
+            try
+            {
+                using var fallbackDlg = new FolderBrowserDialog
+                {
+                    AutoUpgradeEnabled = false,
+                    Description = "Select Folder with MP3 Files"
+                };
+                if (fallbackDlg.ShowDialog(this) == DialogResult.OK && !string.IsNullOrWhiteSpace(fallbackDlg.SelectedPath))
+                {
+                    txtPath.Text = fallbackDlg.SelectedPath;
+                    return;
+                }
+            }
+            catch
+            {
+                // Fallback 2: OpenFileDialog folder selector
+                using var ofd = new OpenFileDialog
+                {
+                    ValidateNames = false,
+                    CheckFileExists = false,
+                    CheckPathExists = true,
+                    FileName = "Select Folder",
+                    Title = "Select Folder with MP3 Files"
+                };
+                if (ofd.ShowDialog(this) == DialogResult.OK)
+                {
+                    string? folder = Path.GetDirectoryName(ofd.FileName);
+                    if (!string.IsNullOrEmpty(folder))
+                    {
+                        txtPath.Text = folder;
+                        return;
+                    }
+                }
+            }
+
+            MessageBox.Show(this, $"Could not open folder selector: {ex.Message}", "Browse Folder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 
     private async void BtnScan_Click(object? sender, EventArgs e)

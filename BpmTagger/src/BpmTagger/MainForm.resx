@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="6a35e54ce96eef10d7a7f7a0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6a35e54ce96eef10d7a7f7a0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6a35e171e96eef10d7a1210b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6a35e171e96eef10d7a1210b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6a3725fbe96eef10d7ce07c5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6a3725fbe96eef10d7ce07c5.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ab1cfd066aa5e8979b65b4f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ab1cfd066aa5e8979b65b4f.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ab1e83666aa5e897909600b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ab1e83666aa5e897909600b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6aba62d3e2c0517372b7f422" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6aba62d3e2c0517372b7f422.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac2c70ce2db33c2047cf496" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac2c70ce2db33c2047cf496.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac3b01ae2db33c2042ed73c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac3b01ae2db33c2042ed73c.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac9b03dfd269987086058cb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac9b03dfd269987086058cb.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac9fe93fd2699870892d9dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac9fe93fd2699870892d9dd.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac94b1bfd26998708d71e20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac94b1bfd26998708d71e20.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac998bffd2699870805b239" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac998bffd2699870805b239.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ac9207568528c7bc69b32f9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ac9207568528c7bc69b32f9.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6aca23d1fd2699870823aac4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6aca23d1fd2699870823aac4.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6aca44b3fd26998708a353bc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6aca44b3fd26998708a353bc.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acac78d2d6c12da4f50d489 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acac78d2d6c12da4f50d489 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acb71222d6c12da4ff017ca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acb71222d6c12da4ff017ca.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acbb3172d6c12da4feb0961" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acbb3172d6c12da4feb0961.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acbf4ade3947db7f8af9c9f (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acbf4ade3947db7f8af9c9f (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acc0abfe3947db7f803cf03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acc0abfe3947db7f803cf03.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acd3dd7d6a799aa4beffb73" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acd3dd7d6a799aa4beffb73.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ace37e0a2904e34dca99593 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ace37e0a2904e34dca99593 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ace888ec09bcaddc28b908c (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ace888ec09bcaddc28b908c (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ace9066c09bcaddc2aadd22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ace9066c09bcaddc2aadd22.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acf1bf9c09bcaddc2d5a4eb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acf1bf9c09bcaddc2d5a4eb.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acf81c9c09bcaddc26e7a47" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acf81c9c09bcaddc26e7a47.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6acfeaffc09bcaddc20ad2c2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6acfeaffc09bcaddc20ad2c2.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad0c2e3c09bcaddc25a28e8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad0c2e3c09bcaddc25a28e8.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad0ec1ec09bcaddc2015356" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad0ec1ec09bcaddc2015356.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad0fb9fc09bcaddc23dd68b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad0fb9fc09bcaddc23dd68b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad1cf6bc09bcaddc289e272 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad1cf6bc09bcaddc289e272 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad4d5bede404707c2e8f448" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad4d5bede404707c2e8f448.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad5c847de404707c2544e5f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad5c847de404707c2544e5f.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad5d62fde404707c2869141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad5d62fde404707c2869141.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7b88eb48169d5a4a193b0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7b88eb48169d5a4a193b0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7b686b48169d5a49a55a8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7b686b48169d5a49a55a8.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7eb8b933ea1fb0f29ab40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7eb8b933ea1fb0f29ab40.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="6ad7fee5b48169d5a4a0f632" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7fee5b48169d5a4a0f632.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad8e56db48169d5a4e51e7c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad8e56db48169d5a4e51e7c.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad9cba3b48169d5a4269052" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad9cba3b48169d5a4269052.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad05baac09bcaddc2bce1c4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad05baac09bcaddc2bce1c4.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad08b24c09bcaddc279c0a9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad08b24c09bcaddc279c0a9.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad52ee1de404707c22751c7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad52ee1de404707c22751c7.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad54e48de404707c297919a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad54e48de404707c297919a.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad83b72b48169d5a4748210" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad83b72b48169d5a4748210.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad86aceb48169d5a4215edb (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad86aceb48169d5a4215edb (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad90ab9b48169d5a46b915d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad90ab9b48169d5a46b915d.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad064e4c09bcaddc2e214ce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad064e4c09bcaddc2e214ce.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad148a6c09bcaddc267fa63" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad148a6c09bcaddc267fa63.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad395d9de404707c25dd598" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad395d9de404707c25dd598.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad554ffde404707c2b08a6b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad554ffde404707c2b08a6b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad616c6de404707c26e4a9a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad616c6de404707c26e4a9a.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad650fd8bf5ffbf87bdbe59" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad650fd8bf5ffbf87bdbe59.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad705e834e9bdab695d2672" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad705e834e9bdab695d2672.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad893f6b48169d5a4b812db" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad893f6b48169d5a4b812db.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7711c34e9bdab69e6dc3f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7711c34e9bdab69e6dc3f.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad8320db48169d5a45365c3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad8320db48169d5a45365c3.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad60602de404707c2335245" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad60602de404707c2335245.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad62286de404707c297d20a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad62286de404707c297d20a.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad86076b48169d5a4fb7934" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad86076b48169d5a4fb7934.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7005734e9bdab69480795" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7005734e9bdab69480795.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7244034e9bdab69cd5ba0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7244034e9bdab69cd5ba0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7354534e9bdab690cdefe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7354534e9bdab690cdefe.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ad7708934e9bdab69e4c75b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ad7708934e9bdab69e4c75b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada4daab48169d5a404d603" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada4daab48169d5a404d603.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada5bd6b48169d5a437d605 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada5bd6b48169d5a437d605 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada5bd6b48169d5a437d605 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada5bd6b48169d5a437d605 (2).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada23c8b48169d5a46cad80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada23c8b48169d5a46cad80.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada25c6b48169d5a473dc28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada25c6b48169d5a473dc28.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada45acb48169d5a4e7cf74" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada45acb48169d5a4e7cf74.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada45acb48169d5a4e7cf74 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada45acb48169d5a4e7cf74 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6ada6928b48169d5a4660139" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6ada6928b48169d5a4660139.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adadac0e22175dfca71a28b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adadac0e22175dfca71a28b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adadbb0e22175dfca74f148" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adadbb0e22175dfca74f148.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adb1e19e22175dfca699ecf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adb1e19e22175dfca699ecf.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adb1e19e22175dfca699ecf (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adb1e19e22175dfca699ecf (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adb52bfe22175dfca2fe2b9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adb52bfe22175dfca2fe2b9.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adb59e9e22175dfca4a5994" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adb59e9e22175dfca4a5994.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="6adb86eae22175dfcaed57a4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\6adb86eae22175dfcaed57a4.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68b523c94517ed6e7555e954" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68b523c94517ed6e7555e954.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68b531bd4517ed6e7569db45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68b531bd4517ed6e7569db45.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68b5497e4517ed6e75869fb7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68b5497e4517ed6e75869fb7.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68bb2bb504397990aafe8e06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68bb2bb504397990aafe8e06.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68bc9b89790291db9210482c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68bc9b89790291db9210482c.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68bc9074790291db92fe11a6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68bc9074790291db92fe11a6.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68c0d1384c992ff3092d8066" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68c0d1384c992ff3092d8066.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68e8178d8c88a3c1f65b973f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68e8178d8c88a3c1f65b973f.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68e8178d8c88a3c1f65b973f (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68e8178d8c88a3c1f65b973f (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68eecdba8c88a3c1f675d5e0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68eecdba8c88a3c1f675d5e0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68eecfcc8c88a3c1f6777366" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68eecfcc8c88a3c1f6777366.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68ef21138c88a3c1f6d5e82e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68ef21138c88a3c1f6d5e82e.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68f3ee638c88a3c1f6ceae68" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68f3ee638c88a3c1f6ceae68.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68f3ee638c88a3c1f6ceae68 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68f3ee638c88a3c1f6ceae68 (1).mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68f156588c88a3c1f6672e87" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68f156588c88a3c1f6672e87.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68f159218c88a3c1f66a949b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68f159218c88a3c1f66a949b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68fc1b4f8c88a3c1f6e1775d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68fc1b4f8c88a3c1f6e1775d.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68fd7d558c88a3c1f63f2777" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68fd7d558c88a3c1f63f2777.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68fd8a988c88a3c1f6564091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68fd8a988c88a3c1f6564091.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="68fea3b48c88a3c1f6e1f5a6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\68fea3b48c88a3c1f6e1f5a6.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="69d25fe202816b263d5ec737" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\69d25fe202816b263d5ec737.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="69994accab40b0d51f90441b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\69994accab40b0d51f90441b.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI1LzEwLzAxLzI1NTY4NzhfdmlkZW8ubXA0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI1LzEwLzAxLzI1NTY4NzhfdmlkZW8ubXA0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI1LzEwLzE2LzI2MjUyNzBfYm9vbWVyYW5nLm1wNA==" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI1LzEwLzE2LzI2MjUyNzBfYm9vbWVyYW5nLm1wNA==.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzA0LzE0Lzg1LzM0MzAxNzdfdmlkZW8ubXA0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzA0LzE0Lzg1LzM0MzAxNzdfdmlkZW8ubXA0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAyLzI4LzA5LzMyNzU4MTFfdmlkZW8ubXA0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAyLzI4LzA5LzMyNzU4MTFfdmlkZW8ubXA0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAyLzIxLzkyLzMyNTM2NTZfdmlkZW8ubXA0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAyLzIxLzkyLzMyNTM2NTZfdmlkZW8ubXA0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAzLzI3LzMzLzMzNjc4NTRfdmlkZW8ubXA0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\aHR0cHM6Ly9zMy5yZWFsaXN0aWMtbWVkaWEuaW8vc3RvcmFnZS9wb3N0cy8yMDI2LzAzLzI3LzMzLzMzNjc4NTRfdmlkZW8ubXA0.mp4;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
