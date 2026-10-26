@@ -30,68 +30,73 @@ public class MainForm : Form
 
     private void InitializeUi()
     {
+        SuspendLayout();
+
         Text = "BPM Tagger - Windows Music Scanner";
-        ClientSize = new Size(640, 500);
-        MinimumSize = new Size(540, 400);
         StartPosition = FormStartPosition.CenterScreen;
         Font = new Font("Segoe UI", 9.5f, FontStyle.Regular);
         BackColor = Color.FromArgb(248, 249, 250);
+        Padding = new Padding(20, 16, 20, 16);
 
-        // Header
+        // ── Header Title ──────────────────────────────────────────────
         var lblHeader = new Label
         {
-            Text = "MP3 Beats-Per-Minute (BPM) Tagger",
-            Font = new Font("Segoe UI", 13f, FontStyle.Bold),
+            Text = "BPM Tagger",
+            Font = new Font("Segoe UI", 15f, FontStyle.Bold),
             ForeColor = Color.FromArgb(33, 37, 41),
-            Location = new Point(20, 15),
+            Location = new Point(20, 16),
             AutoSize = true
         };
         Controls.Add(lblHeader);
 
+        // ── Subheader Description ─────────────────────────────────────
         var lblSubheader = new Label
         {
-            Text = "Calculates tempo and saves it into Windows Explorer file properties.",
+            Text = "Scans MP3 files, detects tempo, and writes BPM to file properties.",
+            Font = new Font("Segoe UI", 9f, FontStyle.Regular),
             ForeColor = Color.FromArgb(108, 117, 125),
-            Location = new Point(21, 42),
+            Location = new Point(22, 50),
             AutoSize = true
         };
         Controls.Add(lblSubheader);
 
-        // Path Selection Group
+        // ── Music Folder Label ────────────────────────────────────────
         var lblPath = new Label
         {
             Text = "Music Folder:",
-            Location = new Point(20, 75),
+            Location = new Point(20, 82),
             AutoSize = true
         };
         Controls.Add(lblPath);
 
+        // ── Path Text Box ─────────────────────────────────────────────
         txtPath = new TextBox
         {
             Text = PathHelper.GetDefaultMusicPath(),
-            Location = new Point(20, 97),
-            Size = new Size(490, 26),
+            Location = new Point(20, 104),
+            Size = new Size(440, 25),
             Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
         };
         Controls.Add(txtPath);
 
+        // ── Browse Button ─────────────────────────────────────────────
         btnBrowse = new Button
         {
-            Text = "Browse...",
-            Location = new Point(520, 95),
-            Size = new Size(95, 30),
+            Text = "Browse",
+            Location = new Point(470, 102),
+            Size = new Size(80, 28),
             Anchor = AnchorStyles.Top | AnchorStyles.Right,
             Cursor = Cursors.Hand
         };
         btnBrowse.Click += BtnBrowse_Click;
         Controls.Add(btnBrowse);
 
-        // Options
+        // ── Options ───────────────────────────────────────────────────
         chkFastPreview = new CheckBox
         {
-            Text = "Fast analysis (samples 60s preview)",
+            Text = "Fast analysis (60s sample)",
             Checked = true,
-            Location = new Point(20, 135),
+            Location = new Point(20, 140),
             AutoSize = true
         };
         Controls.Add(chkFastPreview);
@@ -100,21 +105,23 @@ public class MainForm : Form
         {
             Text = "Overwrite existing BPM tags",
             Checked = false,
-            Location = new Point(280, 135),
+            Location = new Point(20, 164),
             AutoSize = true
         };
         Controls.Add(chkOverwrite);
 
-        // Actions
+        // ── Action Buttons ────────────────────────────────────────────
+        int btnY = 198;
+
         btnScan = new Button
         {
-            Text = "Scan & Tag MP3s",
-            Location = new Point(20, 170),
-            Size = new Size(180, 38),
+            Text = "Scan && Tag",
+            Location = new Point(20, btnY),
+            Size = new Size(110, 34),
             BackColor = Color.FromArgb(13, 110, 253),
             ForeColor = Color.White,
             FlatStyle = FlatStyle.Flat,
-            Font = new Font("Segoe UI", 10.5f, FontStyle.Bold),
+            Font = new Font("Segoe UI", 9.5f, FontStyle.Bold),
             Cursor = Cursors.Hand
         };
         btnScan.FlatAppearance.BorderSize = 0;
@@ -124,8 +131,8 @@ public class MainForm : Form
         btnCancel = new Button
         {
             Text = "Cancel",
-            Location = new Point(210, 170),
-            Size = new Size(90, 38),
+            Location = new Point(140, btnY),
+            Size = new Size(75, 34),
             Enabled = false,
             Cursor = Cursors.Hand
         };
@@ -134,9 +141,9 @@ public class MainForm : Form
 
         btnAddToPath = new Button
         {
-            Text = PathHelper.IsInUserPath() ? "✓ Added to Terminal PATH" : "Add to Terminal PATH",
-            Location = new Point(430, 170),
-            Size = new Size(185, 38),
+            Text = PathHelper.IsInUserPath() ? "✓ In PATH" : "Add to PATH",
+            Location = new Point(420, btnY),
+            Size = new Size(130, 34),
             Anchor = AnchorStyles.Top | AnchorStyles.Right,
             Enabled = !PathHelper.IsInUserPath(),
             Cursor = Cursors.Hand
@@ -146,7 +153,7 @@ public class MainForm : Form
             if (PathHelper.AddToUserPath(out string msg))
             {
                 MessageBox.Show(this, msg, "Terminal PATH", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnAddToPath.Text = "✓ Added to Terminal PATH";
+                btnAddToPath.Text = "✓ In PATH";
                 btnAddToPath.Enabled = false;
             }
             else
@@ -156,11 +163,11 @@ public class MainForm : Form
         };
         Controls.Add(btnAddToPath);
 
-        // Progress
+        // ── Progress ──────────────────────────────────────────────────
         progressBar = new ProgressBar
         {
-            Location = new Point(20, 220),
-            Size = new Size(595, 18),
+            Location = new Point(20, 246),
+            Size = new Size(530, 16),
             Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
         };
         Controls.Add(progressBar);
@@ -168,22 +175,37 @@ public class MainForm : Form
         lblStatus = new Label
         {
             Text = "Ready to scan.",
-            Location = new Point(20, 245),
-            Size = new Size(595, 20),
+            Location = new Point(20, 270),
+            Size = new Size(530, 18),
             Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
             ForeColor = Color.FromArgb(73, 80, 87)
         };
         Controls.Add(lblStatus);
 
-        // Results List
+        // ── Results Log ───────────────────────────────────────────────
         lstLog = new ListBox
         {
-            Location = new Point(20, 275),
-            Size = new Size(595, 195),
+            Location = new Point(20, 296),
+            Size = new Size(530, 180),
             Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
             Font = new Font("Consolas", 9f)
         };
         Controls.Add(lstLog);
+
+        // ── DPI Scaling ───────────────────────────────────────────────
+        // This is the critical piece: tell WinForms these coordinates were
+        // designed at 96 DPI (100% scaling).  On a 150% display WinForms
+        // will multiply every coordinate and size by 1.5, keeping the
+        // layout proportional.  Without this, fonts scale but controls
+        // do not, causing clipping and overlap.
+        AutoScaleDimensions = new SizeF(96F, 96F);
+        AutoScaleMode = AutoScaleMode.Dpi;
+
+        ClientSize = new Size(570, 500);
+        MinimumSize = new Size(500, 460);
+
+        ResumeLayout(false);
+        PerformLayout();
     }
 
     private void BtnBrowse_Click(object? sender, EventArgs e)
