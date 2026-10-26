@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113
+# Visual Studio Version 18
+VisualStudioVersion = 18.12.12324.72 oobinsiders
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpmTagger", "src\BpmTagger\BpmTagger.csproj", "{3E42DCE9-18BE-45C6-8FBE-D0D9D750FF1B}"
 EndProject
-Project("{C71650DC-51E9-4688-9CE2-02222E33D383}") = "BpmTagger.Package", "src\BpmTagger.Package\BpmTagger.Package.wapproj", "{A3D73C52-08D2-4C90-84E3-40B13F1735BC}"
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "BpmTagger.Package", "src\BpmTagger.Package\BpmTagger.Package.wapproj", "{A3D73C52-08D2-4C90-84E3-40B13F1735BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +26,15 @@ Global
 		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Debug|x64.ActiveCfg = Debug|x64
 		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Debug|x64.Build.0 = Debug|x64
 		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|Any CPU.Build.0 = Release|AnyCPU
+		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|Any CPU.Deploy.0 = Release|AnyCPU
 		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|x64.ActiveCfg = Release|x64
-		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|x64.Build.0 = Release|x64
+		{A3D73C52-08D2-4C90-84E3-40B13F1735BC}.Release|x64.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA104B3F-D3F5-4FCC-91D1-DA32347C980C}
 	EndGlobalSection
 EndGlobal

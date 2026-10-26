@@ -47,6 +47,8 @@ namespace TestNathanWyattHolmes.com
 		{
 			if (TestContext.CurrentTestOutcome == UnitTestOutcome.Failed)
 			{
+				TestContext.WriteLine("❌ Test \"" + TestContext.TestName + "\" failed.");
+
 				TakeScreenshot();
 				AttachPageSource();
 			}

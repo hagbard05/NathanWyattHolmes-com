@@ -5,6 +5,8 @@ namespace TestNathanWyattHolmes.com
 	[TestClass]
 	public sealed class TestNewYorkGalleryPage : SeleniumTestBase
 	{
+		public TestContext TestContext { get; set; }
+
 		[TestMethod]
 		public void NewYorkGalleryLoadsWithHomeAndPicturesNavigation()
 		{
@@ -20,6 +22,8 @@ namespace TestNathanWyattHolmes.com
 		public void BestFriendsMenuLinkOpensDogsGallery()
 		{
 			var page = new NewYorkGalleryPage(Driver);
+
+			TestContext.WriteLine("Clicking the Best Friends link.");
 			page.ClickBestFriendsLink();
 
 			Assert.IsTrue(Driver.Url.EndsWith("PicturesOfDogs.htm", StringComparison.OrdinalIgnoreCase),

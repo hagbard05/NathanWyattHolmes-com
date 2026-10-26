@@ -19,7 +19,7 @@ namespace TestNathanWyattHolmes.com
 		[TestMethod]
 		public void NewYorkMenuLinkOpensNewYorkGallery()
 		{
-			var page = new DogsGalleryPage(Driver);
+			DogsGalleryPage page = new DogsGalleryPage(Driver);
 			page.ClickNewYorkLink();
 
 			Assert.IsTrue(Driver.Url.EndsWith("PicturesOfNewYork.htm", StringComparison.OrdinalIgnoreCase),
