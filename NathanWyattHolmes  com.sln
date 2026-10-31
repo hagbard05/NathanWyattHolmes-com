@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NathanWyattHolmes  com", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNathanWyattHolmes.com", "TestNathanWyattHolmes.com\TestNathanWyattHolmes.com.csproj", "{F864B0D6-30BD-4D77-9CFB-76D2667353C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NathanWyattHolmesComPages", "NathanWyattHolmesComPages\NathanWyattHolmesComPages.csproj", "{533972B4-92A4-4C48-B682-5179BB9B036D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestNathanWyattHolmesComPageObj", "NathanWyattHolmesComPages\TestNathanWyattHolmesComPageObj.csproj", "{533972B4-92A4-4C48-B682-5179BB9B036D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

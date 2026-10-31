@@ -14,9 +14,10 @@ public static class Program
     [DllImport("user32.dll")]
     private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
-    private const int SW_HIDE = 0;
+    private const int SW_HIDE = 0; // 0 = HIDE, 5 = SHOW
+    private const int SW_SHOW = 5;
 
-    [STAThread]
+	[STAThread]
     public static int Main(string[] args)
     {
         // If launched with command-line arguments, run purely as a terminal tool

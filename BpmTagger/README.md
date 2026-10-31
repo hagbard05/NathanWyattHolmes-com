@@ -65,9 +65,9 @@ bpmscan --help
 ## Packaging for the Microsoft Store in Visual Studio
 
 1. Open `BpmTagger.sln` in **Visual Studio 2022 / 2026**.
-2. Set configuration to **Release | x64** (or **Any CPU**).
+2. Set the configuration to **Release | x64**. The solution's **Release | Any CPU** configuration also maps both projects to x64.
 3. In Solution Explorer, right-click `BpmTagger.Package` -> **Publish** -> **Create App Packages...**.
 4. Select:
    - **Microsoft Store using a new app name** (if uploading to Partner Center) OR
    - **Sideloading / Direct MSIX** (for testing locally or distributing standalone `.msixbundle`).
-5. Visual Studio will produce the signed `.msixupload` package ready for submission to the Microsoft Partner Center.
+5. The project builds an x64 and ARM64 `.msixbundle` and an `.msixupload` package for submission to the Microsoft Partner Center.

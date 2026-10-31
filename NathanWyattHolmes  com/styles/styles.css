@@ -236,47 +236,25 @@ h6
     right: 8px;
 }
 
-
 .glow 
 {
-	font-size: 42px;
-	font-family: sans-serif;
-	color: white;
-	text-align: center;
 	animation: glow 1s ease-in-out infinite alternate;
 }
-
 @-webkit-keyframes glow 
 {
 	from 
 	{
 		text-shadow: 
-			0 0 2px #210042,
-			0 0 4px #000865,
-			0 0 6px #3c0065,
-			0 0 10px #ff1500,
-			0 0 15px #ff2d00, 
-			0 0 20px #ff3d00, 
-			0 0 30px #ff4900, 
-			0 0 40px #ff5e00, 
-			0 0 50px #ff6e00, 
-			0 0 55px #ff9600, 
-			0 0 65px #ffff00;
+		0 0 0.5px #ff00aa,
+		0 0 0.75px #ffBB00, 
 	}
 
 	to 
-	{
-		text-shadow: 
-			0 0 3px #19001a,
-			0 0 5px #260015,
-			0 0 10px #ff1000,
-			0 0 20px #ff2c00, 
-			0 0 30px #ff3b00,
-			0 0 40px #ff4a00, 
-			0 0 50px #ff5400, 
-			0 0 65px #ff6e00, 
-			0 0 85px #ff7700, 
-			0 0 100px #ff0000;
+	{		
+        text-shadow: 
+		0 0 0.75px #ff0000,
+		0 0 1px #ff7700, 
+		0 0 1.25px #ffff00;
 	}
 }
 
@@ -292,7 +270,8 @@ body
   background-color: #333;
 }
 
-.topnav a {
+.topnav a 
+{  
   float: left;
   display: block;
   color: #f2f2f2;
