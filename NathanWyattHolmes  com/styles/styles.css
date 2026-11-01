@@ -167,20 +167,19 @@ h6
         text-shadow: 
             0px 0px 0.5px #FFFFFF,
             0px 0px 1px #FFFFFF,
-            0px 0px 1.5px #FFFFFF,
-            0px 1px 0px #FFFFFF,
-            1px 0px 0px #FFFFFF,
-            1px 1px 0px #FFFFFF,
-            0px -1.5px 0px #FFFFFF,
-            0px -1px 0px #FFFFFF,
-            -1px 0px 0px #FFFFFF,
-            -1px -1px 0px #FFFFFF,
-            1px -1px 0px #FFFFFF,
-            -1px 1px 0px #FFFFFF;
+            0px 0.6px 0px #FFFFFF,
+            0.6px 0px 0px #FFFFFF,
+            0.6px 0.6px 0px #FFFFFF,
+            0px -0.6px 0px #FFFFFF,
+            0px -0.6px 0px #FFFFFF,
+            -0.6px 0px 0px #FFFFFF,
+            -0.6px -0.6px 0px #FFFFFF,
+            0.6px -0.6px 0px #FFFFFF,
+            -0.6px 0.6px 0px #FFFFFF;
     }
     40%
     {
-        transform: scale(1.08);            
+        transform: scale(1.04);            
 /*        color: #101146;*/
 /*        text-shadow:     
             0px 1.5px 0px #28004f,
@@ -194,21 +193,20 @@ h6
     }
     100%
     {
-        transform: scale(1.03);     
+        transform: scale(1.025);     
         background: linear-gradient(#040057, rgb(0 29 255), #0b0023);
         color: #FFFFFF;
         text-shadow: 
             0px 0px 0.5px Black,
             0px 0px 1px Black,
-            0px 0px 1.5px Black,
-            0px 1.3px 0px Black,
-            1.3px 0px 0px Black,
-            1.3px 1.3px 0px Black,
-            0px -1.3px 0px Black,
-            -1.3px 0px 0px Black,
-            -1.3px -1.3px 0px Black,
-            1.3px -1.3px 0px Black,
-            -1.3px 1.3px 0px Black;
+            0px 0.6px 0px Black,
+            0.6px 0px 0px Black,
+            0.6px 0.6px 0px Black,
+            0px -0.6px 0px Black,
+            -0.6px 0px 0px Black,
+            -0.6px -0.6px 0px Black,
+            0.6px -0.6px 0px Black,
+            -0.6px 0.6px 0px Black;
     }
 }
 
@@ -246,7 +244,8 @@ h6
 	{
 		text-shadow: 
 		0 0 0.5px #ff00aa,
-		0 0 0.75px #ffBB00, 
+		0 0 0.75px #ff6600,
+        0 0 1px #ffff00;
 	}
 
 	to 
@@ -254,7 +253,8 @@ h6
         text-shadow: 
 		0 0 0.75px #ff0000,
 		0 0 1px #ff7700, 
-		0 0 1.25px #ffff00;
+		0 0 1.25px #ffffAA,
+        0px 0px 1.5px #FFFFFF;
 	}
 }
 
