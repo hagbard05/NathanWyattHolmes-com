@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Holmesoft-Privacy-Policy.html" />
     <Content Include="Hubble-hs-2011-11.jpg" />
     <Content Include="OnSoftwareQualityEngineering.html" />
     <Content Include="Pictures.htm" />
