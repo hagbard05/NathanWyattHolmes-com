@@ -20,7 +20,7 @@ namespace TestNathanWyattHolmes.com
 			var options = new ChromeOptions();
 
 			// Core arguments required for Linux CI agents
-			//options.AddArgument("--headless=new");          // Runs without a GUI
+			options.AddArgument("--headless=new");          // Runs without a GUI
 			options.AddArgument("--no-sandbox");             // Bypasses container security boundaries
 			options.AddArgument("--disable-dev-shm-usage");  // Overcomes resource limits in Linux
 
