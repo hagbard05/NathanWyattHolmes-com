@@ -243,18 +243,38 @@ h6
 	from 
 	{
 		text-shadow: 
-		0 0 0.5px #ff00aa,
-		0 0 0.75px #ff6600,
-        0 0 1px #ffff00;
+        0px 0px 0.5px #FFFFFF,
+        0px 0px 1px #FFFFFF,
+        0px 0.6px 0px #FFFFFF,
+        0.6px 0px 0px #FFFFFF,
+        0.6px 0.6px 0px #FFFFFF,
+        0px -0.6px 0px #FFFFFF,
+        0px -0.6px 0px #FFFFFF,
+        -0.6px 0px 0px #FFFFFF,
+        -0.6px -0.6px 0px #FFFFFF,
+        0.6px -0.6px 0px #FFFFFF,
+        -0.6px 0.6px 0px #FFFFFF,		
+        0 0 0.5px #990044,
+		0 0 0.75px #ff5500,
+        0 0 1.25px #ffbf00;
 	}
 
 	to 
 	{		
         text-shadow: 
+        0px 0.6px 0px #FFFFFF,
+        0.6px 0px 0px #FFFFFF,
+        0.6px 0.6px 0px #FFFFFF,
+        0px -0.6px 0px #FFFFFF,
+        0px -0.6px 0px #FFFFFF,
+        -0.6px 0px 0px #FFFFFF,
+        -0.6px -0.6px 0px #FFFFFF,
+        0.6px -0.6px 0px #FFFFFF,
+        -0.6px 0.6px 0px #FFFFFF,	
 		0 0 0.75px #ff0000,
 		0 0 1px #ff7700, 
-		0 0 1.25px #ffffAA,
-        0px 0px 1.5px #FFFFFF;
+		0 0 1.25px #ffbf00,
+        0px 0px 1.5px #ffff00;
 	}
 }
 
