@@ -52,6 +52,13 @@ namespace TestNathanWyattHolmes.com
 				TakeScreenshot();
 				AttachPageSource();
 			}
+			else if ( TestContext.CurrentTestOutcome == UnitTestOutcome.Inconclusive)
+			{
+				TestContext.WriteLine("🤔 Test \"" + TestContext.TestName + "\" is inconclusive.");
+
+				TakeScreenshot();
+				AttachPageSource();
+			}
 		}
 
 		#region Test Methods
@@ -60,6 +67,15 @@ namespace TestNathanWyattHolmes.com
 		{
 			TestContext.WriteLine("Verifying the landing page title.");
 			Assert.AreEqual("Nathan Holmes - Software Developer Engineer in Test - AI Engineer", driver.Title);
+		}
+
+		[TestMethod]
+		public void ClickGitHub()
+		{
+			TestContext.WriteLine("Clicking the GitHub link on the landing page.");
+			homePage.ClickLnkGitHub();
+			Assert.IsTrue(driver.Url.Contains("github.com", StringComparison.OrdinalIgnoreCase),
+				$"Expected to navigate to GitHub, but current URL was {driver.Url}.");
 		}
 
 		[TestMethod]

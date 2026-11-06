@@ -21,6 +21,7 @@ namespace NathanWyattHolmesComPages
 		public IWebElement menuPersonal => driver.FindElement(By.CssSelector("#menuPersonalTop .TopLevelMenuItem"));
 		public IWebElement lnkHome => driver.FindElement(By.CssSelector("#menuHomeTop .TopLevelMenuItem"));
 		public IWebElement lnkPictures => driver.FindElement(By.CssSelector("#menuPersonal a[href='Pictures.htm']"));
+		public IWebElement lnkGitHub => driver.FindElement(By.CssSelector("a[href='https://github.com/NathanWyattHolmes']"));
 		public IWebElement lnkLessionsLearnedInSoftwareTesting => driver.FindElement(By.CssSelector("a[href='OnSoftwareQualityEngineering.html']"));
 		public IWebElement lnkLinkedIn => driver.FindElement(By.CssSelector("a[href='https://www.linkedin.com/in/nathan-wyatt-holmes/?isSelfProfile=false']"));
 		public IWebElement lnkResume => driver.FindElement(By.CssSelector("a[href='Resume_NathanHolmes.docx']"));
@@ -33,29 +34,33 @@ namespace NathanWyattHolmesComPages
 
 		public void ClickLnkPictures()
 		{
-			new Actions(driver).MoveToElement(menuPersonal).Perform();
-			lnkPictures.Click();
+			ClickMenuItem(this.lnkPictures, this.menuProfessional);
 		}
+
+		public void ClickLnkGitHub()
+		{
+			ClickMenuItem(this.lnkGitHub, this.menuPersonal);
+		}	
 
 		public void ClickLnkLessionsLearnedInSoftwareTesting()
 		{
-			ClickMenuItem(this.lnkLessionsLearnedInSoftwareTesting);
+			ClickMenuItem(this.lnkLessionsLearnedInSoftwareTesting, this.menuProfessional);
 		}
 
 		public void ClickLnkLinkedIn()
 		{
-			ClickMenuItem(this.lnkLinkedIn);
+			ClickMenuItem(this.lnkLinkedIn, this.menuProfessional);
 		}
 
 		public void ClickLnkResume()
 		{
-			ClickMenuItem(this.lnkResume);
+			ClickMenuItem(this.lnkResume, this.menuProfessional);
 		}
 
-		public void ClickMenuItem( IWebElement menuItem)
+		public void ClickMenuItem( IWebElement menuItem, IWebElement parentMenu)
 		{
 			Actions actions = new Actions(driver);
-			actions.MoveToElement(menuProfessional).Perform();
+			actions.MoveToElement(parentMenu).Perform();
 			menuItem.Click();
 		}
 	}
